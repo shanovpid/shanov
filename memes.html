@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мемы про Шанова Дмитрия - 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #2980b9;
+        }
+
+        nav {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #c0392b;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .meme { /* Добавили стиль для мемов */
+            margin-bottom: 30px;
+        }
+
+        .meme img {
+            max-width: 80%; /* Ограничиваем ширину картинок */
+            height: auto;
+            margin-bottom: 10px; /* Отступ между картинкой и текстом */
+        }
+
+        .spoiler {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .spoiler-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        .spoiler-content.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.8em;
+        }
+
+        /* Стили для страницы "О Шанове" */
+        #about_shanov {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #about_shanov h2 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        /* Стили для разделов "Предложить мем" */
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Выравнивание текста по левому краю в секциях */
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section li {
+            margin-bottom: 10px;
+        }
+
+        /*Стили для "Предложить мем" */
+        #propose p {
+            text-align: center;
+        }
+
+        #shanovInfo {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        #shanovInfo.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Мемы про Шанова Дмитрия - 2025</h1>
+    <p>Самые свежие и смешные мемы о легендарном Шанове!</p>
+</header>
+
+<nav>
+    <a href="best_memes.html">Лучшие мемы</a>
+    <a href="propose.html">Предложить мем</a>
+    <button id="toggleShanovInfo">О Шанове</button>
+</nav>
+
+<main>
+    <div id="about_shanov">
+        <h2>Кто такой Шанов Дмитрий?</h2>
+        <div id="shanovInfo">
+            <p>1. ИМЯ: ШАНОВ ДМИТРИЙ АЛЕКСАНДРОВИЧ</p>
+            <p>2. ПРОЖИВАЮЩИЙ В КАНАВЕ</p>
+            <p>3. МАМА - НЕТУ, ПАПА - С ХЛЕБОМ</p>
+        </div>
+    </div>
+
+    <div class="meme">
+        <img src="6.jpg"
+             alt="Мем 1 про Шанова" style="height: 120px">
+        <p>Подпись к мему 1: Шанов всегда готов к новым вызовам!</p>
+        <div class="spoiler" onclick="toggleSpoiler(this)">
+            Показать продолжение
+        </div>
+        <div class="spoiler-content">
+            <p>И всегда выходит победителем!</p>
+        </div>
+    </div>
+
+    <div class="meme">
+        <img src="7.jpg"
+             alt="Мем 2 про Шанова" style="height: 80px">
+        <p>Подпись к мему 2: Шанов знает толк в хорошем отдыхе!</p>
+        <div class="spoiler" onclick="toggleSpoiler(this)">
+            Показать продолжение
+        </div>
+        <div class="spoiler-content">
+            <p>Релакс – это его второе имя!</p>
+        </div>
+    </div>
+
+    <!-- Добавьте больше мемов здесь -->
+
+</main>
+
+<footer>
+    &copy; 2025 Сайт мемов про Дмитрия Шанова, любимого всеми (или нет). Все права защищены, кроме прав Шанова.
+</footer>
+
+<script>
+    function toggleSpoiler(element) {
+        const spoilerContent = element.nextElementSibling;
+        spoilerContent.classList.toggle('active');
+        if (spoilerContent.classList.contains('active')) {
+            element.textContent = 'Скрыть продолжение';
+        } else {
+            element.textContent = 'Показать продолжение';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleShanovInfoButton = document.getElementById('toggleShanovInfo');
+        const shanovInfo = document.getElementById('shanovInfo');
+
+        toggleShanovInfoButton.addEventListener('click', function() {
+            shanovInfo.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
